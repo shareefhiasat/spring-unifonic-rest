@@ -149,8 +149,27 @@ Glimps for intellij configuration
 - [x] _Implement_ <b>`GetMessageIDStatus`</b> (https://unifonic.docs.apiary.io/#reference/messages/getmessageidstatus)
 - [x] _Add_ <b>`documentation comments`</b> and <b>`javaDocs`</b> in code.
 - [] _Prepare_ Design Document
-- [] A Maven based `java client SDK` that can be shared with customers to use this service. This SDK will encapsulate the HTTP requests and responses.(#Running Unifonic locally depending on OS))
-
+- [x] A Maven based `java client SDK` that can be shared with customers to use this service. This SDK will encapsulate the HTTP requests and responses.(#Running Unifonic locally depending on OS))
+you can use [Run packaged war](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#build-tool-plugins-maven-packaging)
+    1. Run `$ mvn package`
+    2. If you look in the target directory, you should see spring-unifonic-1.5.2.war. The file should be around 34 MB in size. If you want to peek inside, you can use jar tvf, as follows:</br>
+    `$ jar tvf target/spring-unifonic-1.5.2.war`
+    3. `$ java -jar target/spring-unifonic-1.5.2.war` you shall see:
+       
+       ``  .   ____          _            __ _ _
+        /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+       ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+        \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+         '  |____| .__|_| |_|_| |_\__, | / / / /
+        =========|_|==============|___/=/_/_/_/
+        :: Spring Boot ::  (v2.0.2.RELEASE)
+       ....... . . .
+       ....... . . . (log output here)
+       ....... . . .
+       ........ Started Example in 2.536 seconds (JVM running for 2.864) ``
+       **As before, to exit the application, press ctrl-c.**
+       4. Go to http://localhost:9966/unifonic/swagger-ui.html
+       
 ## Technology details
 - [x] [Java 8+](http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html)
 - [x] [Spring boot](https://spring.io/projects/spring-boot)
