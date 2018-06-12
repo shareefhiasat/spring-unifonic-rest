@@ -21,9 +21,12 @@ You can then access Unifonic here: http://localhost:9966/unifonic/
 
 ## Swagger REST API documentation 
 After running you can also access the swagger Mockup Service for test at
-<a href="http://localhost:9966/unifonic/swagger-ui.html">http://localhost:9966/unifonic/swagger-ui.html</a>
-<img alt="explaining" src="http://nimb.ws/wFjl6b"></br>
-<img alt="explaining" src="http://nimb.ws/X1eoZM">
+
+http://localhost:9966/unifonic/swagger-ui.html
+
+![](https://s.nimbusweb.me/attachment/1804114/uxyxfp5yxzwnh9pa31iz/735212-DFAnOKTmGu95JnsP/Swagger_UI_-_Google_Chrome.png)
+
+![](https://s.nimbusweb.me/attachment/1804103/i8teut8v1h6dqedfgy6c/735212-6qRXHbUr4SzqfDHS/Screenshot_2018-06-12_10.12.06.png)
 
 ## Database configuration
 
@@ -113,9 +116,10 @@ File -> Import -> Maven -> Existing Maven project
 | JPA | [jpa folder](src/main/java/com/unifonic/repository/jpa) |
 | Spring Data JPA | [springdatajpa folder](src/main/java/com/unifonic/repository/springdatajpa) |
 
-##Intellij Run/Debug Configuration
+## fIntellij Run/Debug Configuration
 Glimps for intellij configuration
-<img alt="explaining" src="http://nimb.ws/fxNZM7"></br> 
+![](https://s.nimbusweb.me/attachment/1804191/pf1xmytk69fmim3c5oy0/735212-ZrMSuR5q2TTEIcMk/Screenshot_2018-06-12_10.43.15.png)</br> 
+
 
 
 
@@ -139,7 +143,7 @@ Glimps for intellij configuration
 ######6. <span style="color:orange;">Why is optional parameter `Priority: (optional, string)` has default of only value High; what would happen if i sent any dummy value ?</span>
 ######7. <span style="color:orange;">Why Docs dose not say the `NumberOfUnits` is according to carier or lanuage or its really same for all ?</span>
 
-###Tasks Done
+## Tasks Done
 - [x] _Implement_ <b>`Send`</b> (https://unifonic.docs.apiary.io/#reference/messages/send)
 - [x] _Implement_ <b>`SendBulk`</b> (https://unifonic.docs.apiary.io/#reference/messages/sendbulk)
 - [x] _Implement_ <b>`GetMessageIDStatus`</b> (https://unifonic.docs.apiary.io/#reference/messages/getmessageidstatus)
@@ -147,7 +151,7 @@ Glimps for intellij configuration
 - [] _Prepare_ Design Document
 - [] A Maven based `java client SDK` that can be shared with customers to use this service. This SDK will encapsulate the HTTP requests and responses.(#Running Unifonic locally depending on OS))
 
-###Technology details
+## Technology details
 - [x] [Java 8+](http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html)
 - [x] [Spring boot](https://spring.io/projects/spring-boot)
 - [x] [Tomcat](http://tomcat.apache.org/)
