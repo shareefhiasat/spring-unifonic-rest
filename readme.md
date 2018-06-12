@@ -132,16 +132,16 @@ Glimps for intellij configuration
 <a href="https://stackoverflow.com/users/944593/shareef">See My StackOverFlow Profile Here</a>
 
 
-###Questions to Unifonic about API Guide
-#####After implementing some end points at </br> [Unifonic API Guide](https://unifonic.docs.apiary.io) <br/>i noticed the following issues in docs please continue reading.
+### Questions to Unifonic about API Guide
+#### After implementing some end points at </br> [Unifonic API Guide](https://unifonic.docs.apiary.io) <br/>i noticed the following issues in docs please continue reading.
 
-######1. <span style="color:orange;">Why in docs the sample saying DateCreated" :"2014-07-22" but at same time it say formate should be yyyy-mm-dd hh:mm:ss !</span>
-######2. <span style="color:orange;">Why and what (there is no/is) time zone specification or default ?</span>
-######3. <span style="color:orange;">Why the amount is it in fraction cent as i discovered ,I believe docs should have more info!</span>
-######4. <span style="color:orange;">Why Balance is String and cost is double ? </span>
-######5. <span style="color:orange;">Why Balance is in `sendBulk` is string while its in `send` double ? </span>
-######6. <span style="color:orange;">Why is optional parameter `Priority: (optional, string)` has default of only value High; what would happen if i sent any dummy value ?</span>
-######7. <span style="color:orange;">Why Docs dose not say the `NumberOfUnits` is according to carier or lanuage or its really same for all ?</span>
+#### 1. <span style="color:orange;">Why in docs the sample saying DateCreated" :"2014-07-22" but at same time it say formate should be yyyy-mm-dd hh:mm:ss !</span>
+#### 2. <span style="color:orange;">Why and what (there is no/is) time zone specification or default ?</span>
+#### 3. <span style="color:orange;">Why the amount is it in fraction cent as i discovered ,I believe docs should have more info!</span>
+#### 4. <span style="color:orange;">Why Balance is String and cost is double ? </span>
+#### 5. <span style="color:orange;">Why Balance is in `sendBulk` is string while its in `send` double ? </span>
+#### 6. <span style="color:orange;">Why is optional parameter `Priority: (optional, string)` has default of only value High; what would happen if i sent any dummy value ?</span>
+#### 7. <span style="color:orange;">Why Docs dose not say the `NumberOfUnits` is according to carier or lanuage or its really same for all ?</span>
 
 ## Tasks Done
 - [x] _Implement_ <b>`Send`</b> (https://unifonic.docs.apiary.io/#reference/messages/send)
