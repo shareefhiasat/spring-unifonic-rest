@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Simple JavaBean domain object with an id property. Used as a base class for objects needing this property.
@@ -11,15 +12,17 @@ import javax.persistence.*;
  * @author Shareef Hiasat
  */
 @MappedSuperclass
-public class MessageBaseEntity {
+public class MessageBaseEntity implements Serializable{
+
+    private static final long serialVersionUID = -4232280428469660467L;
+
     /**
      * A unique ID that identifies a message
      */
     @Id
-    @Column(name = "id")
     @JsonProperty("MessageID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    protected Integer id;
+    public Integer id;
 
     public Integer getId() {
         return id;
@@ -34,4 +37,10 @@ public class MessageBaseEntity {
         return this.id == null;
     }
 
+    @Override
+    public String toString() {
+        return "MessageBaseEntity{" +
+            "id=" + id +
+            '}';
+    }
 }

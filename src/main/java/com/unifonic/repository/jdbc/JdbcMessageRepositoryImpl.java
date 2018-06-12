@@ -77,9 +77,9 @@ public class JdbcMessageRepositoryImpl implements MessageRepository {
         } catch (EmptyResultDataAccessException ex) {
             throw new ObjectRetrievalFailureException(Message.class, id);
         }
-        if(message != null)
+        if (message != null)
             message.setStatusAble(true);
-        if(message.getStatus() == null || message.getStatus().isEmpty()) {//work around for JDBC profile bug with status and many to one
+        if (message.getStatus() == null || message.getStatus().isEmpty()) {//work around for JDBC profile bug with status and many to one
             message.setStatus(QUEUED_STATUS_DESC);
             Status queued = new Status();
             queued.setId(1);

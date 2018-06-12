@@ -11,6 +11,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.annotation.Generated;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 
@@ -25,8 +26,9 @@ import java.util.Date;
 @JsonTypeInfo(use = Id.NAME, include = As.EXTERNAL_PROPERTY, property = "data")
 @JsonPropertyOrder({"id", "status", "numberOfUnits", "cost", "balance", "recipient", "dataCreated"})
 @JsonSerialize(using = JacksonCustomMessageSerializer.class)
-public class Message extends MessageBaseEntity implements StatusAble, SendBulk {
+public class Message extends MessageBaseEntity implements StatusAble, SendBulk, Serializable {
 
+    private static final long serialVersionUID = -4235680428469660467L;
     /**
      * Store list of bulk messages
      */

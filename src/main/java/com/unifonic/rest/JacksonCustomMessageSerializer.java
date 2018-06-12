@@ -11,6 +11,8 @@ import java.io.IOException;
 import java.text.Format;
 import java.text.SimpleDateFormat;
 
+import static com.unifonic.util.ConfigConstants.QUEUED_STATUS_DESC;
+
 /**
  * @author Shareef Hiasat
  */
@@ -47,7 +49,7 @@ public class JacksonCustomMessageSerializer extends StdSerializer<Message> {
     /**
      * ordered and formatted as the link in docs
      * Check conditional json when this is used with statusAble flag
-     * {@link com.unifonic.rest.MessageRestController#findByIdAndAppSid(String, int)  getMessageStatus}
+     * {@link com.unifonic.rest.MessageRestController}
      *
      * @param message
      * @param jgen
@@ -66,7 +68,7 @@ public class JacksonCustomMessageSerializer extends StdSerializer<Message> {
         if (message.isStatusAble()) {//for get message status
 
             jgen.writeObjectFieldStart("data");//naming root json message
-            jgen.writeStringField("Status", message.getStatusType().getName());
+            jgen.writeStringField("Status", QUEUED_STATUS_DESC);
             jgen.writeEndObject();// message status
 
             return;
@@ -83,7 +85,7 @@ public class JacksonCustomMessageSerializer extends StdSerializer<Message> {
                     jgen.writeNumberField("MessageID", msgDTO.getId());
                 }
                 jgen.writeNumberField("Recipient", msgDTO.getRecipient());
-                jgen.writeStringField("Status", msgDTO.getStatusType().getName());
+                jgen.writeStringField("Status", QUEUED_STATUS_DESC);
                 jgen.writeEndObject(); // message
             }
 
@@ -109,7 +111,7 @@ public class JacksonCustomMessageSerializer extends StdSerializer<Message> {
         }
 
         //ordered as API
-        jgen.writeStringField("Status", message.getStatusType().getName());
+        jgen.writeStringField("Status", QUEUED_STATUS_DESC);
         jgen.writeStringField("NumberOfUnits", message.getNumberOfUnits());
         jgen.writeNumberField("Cost", message.getCost());
         jgen.writeStringField("Balance", message.getBalance());

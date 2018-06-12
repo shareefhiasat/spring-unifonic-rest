@@ -3,7 +3,9 @@ package com.unifonic.repository;
 import com.unifonic.model.BaseEntity;
 import com.unifonic.model.Message;
 import org.springframework.dao.DataAccessException;
+import org.springframework.data.jpa.repository.QueryHints;
 
+import javax.persistence.QueryHint;
 import java.util.Collection;
 
 /**
@@ -21,6 +23,8 @@ public interface MessageRepository {
      * @return the <code>Message</code> if found
      * @throws org.springframework.dao.DataRetrievalFailureException if not found
      */
+    @QueryHints({
+        @QueryHint(name = "org.hibernate.cacheable", value = "true")})
     Message findById(int id) throws DataAccessException;
 
     /**
@@ -31,6 +35,8 @@ public interface MessageRepository {
      * @return the <code>Message</code> if found
      * @throws org.springframework.dao.DataRetrievalFailureException if not found
      */
+    @QueryHints({
+        @QueryHint(name = "org.hibernate.cacheable", value = "true")})
     Message findByIdAndAppSid(int id, String appSid) throws DataAccessException;
 
 

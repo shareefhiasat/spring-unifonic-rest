@@ -1,5 +1,7 @@
 package com.unifonic.repository.jdbc;
 
+import com.hazelcast.core.Hazelcast;
+import com.hazelcast.core.HazelcastInstance;
 import com.unifonic.model.Status;
 import com.unifonic.repository.StatusRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,6 +58,10 @@ public class JdbcStatusRepositoryImpl implements StatusRepository {
 
     @Override
     public Collection<Status> findAll() throws DataAccessException {
+        HazelcastInstance instance = Hazelcast.getHazelcastInstanceByName("test");
+
+        System.err.println(instance.getCacheManager());
+
         Map<String, String> params = new HashMap<>();
         return this.namedParameterJdbcTemplate.query(
             "SELECT id, name FROM status",

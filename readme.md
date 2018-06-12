@@ -180,7 +180,7 @@ you can use [Run packaged war](https://docs.spring.io/spring-boot/docs/current/r
     - [Hsqldb](http://hsqldb.org/)</br>
     - [Postgresql](https://www.postgresql.org/)</br>
     
-- [] _Implement_ [HazelCast](https://hazelcast.com/)
+- [X] _Implement_ [HazelCast](https://hazelcast.com/)
 - [] Prepare `JMeter` A stress testing setup to demonstrate the service performance
 - [] **Deploy on cloud**
 ### Extra Libraries/Tools Used:
@@ -193,9 +193,10 @@ you can use [Run packaged war](https://docs.spring.io/spring-boot/docs/current/r
 
 ### Extra Tweaks
 - Use [JDK 7+](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) diamond operator
-- Implement [Caching](https://spring.io/guides/gs/caching/) data with spring on status table
+- Implement [Caching](https://spring.io/guides/gs/caching/) data with spring on status table Repository
 - [editor config](https://github.com/xxx/master/.editorconfig) for easy use in common text editors. Read more and download plugins at <http://editorconfig.org>.
 for unifying editor in all IDE's.
+- Implement Caching hibernate ( its not very usefull after i added hazelcast cache)
 
 ### Extra Logic Implemented
 - Implement API end point for `getAllMessages`
@@ -224,6 +225,7 @@ from <br/> [Unifonic API Guide Error-List](https://unifonic.docs.apiary.io/#refe
 - [] Implement more advanced check on `Accounts` and `Balances` and validate proper errors accordingly.  
 - [] Implement simple `senderId`(s) per account and set default one
 - [] Implement Tests using [Mockito](https://github.com/mockito/mockito) ,[JUnit](https://junit.org/junit5/) and [Spring boot test](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-testing.html)
+- [] Add Metrics Spring watcher for hazelcast
 
 ### Notes
  application use two active profiles

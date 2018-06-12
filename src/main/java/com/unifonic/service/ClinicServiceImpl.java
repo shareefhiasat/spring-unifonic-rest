@@ -37,10 +37,11 @@ public class ClinicServiceImpl implements ClinicService {
 
     @Override
     @Transactional(readOnly = true)
-    public Message findMessageById(int id) {
+    @Cacheable(value="UnifonicCache",key="#messageId",unless="#result==null")
+    public Message findMessageById(int messageId) {
         Message message = null;
         try {
-            message = messageRepository.findById(id);
+            message = messageRepository.findById(messageId);
         } catch (ObjectRetrievalFailureException | EmptyResultDataAccessException e) {
             // just ignore not found exceptions for Jdbc/Jpa realization
             return null;
@@ -50,6 +51,7 @@ public class ClinicServiceImpl implements ClinicService {
 
     @Override
     @Transactional(readOnly = true)
+    @Cacheable(value="UnifonicCache",key="#appSid",unless="#result==null")
     public Message findByIdAndAppSid(int id, String appSid) {
         Message message = null;
         try {
@@ -82,12 +84,14 @@ public class ClinicServiceImpl implements ClinicService {
     }
 
     @Override
+
     public void deleteMessage(Message message) throws DataAccessException {
         messageRepository.delete(message);
     }
 
     @Override
     @Transactional(readOnly = true)
+//    @Cacheable(value="UnifonicCache",key="#statusId",unless="#result==null")
     public Status findStatusById(int statusId) {
         Status status = null;
         try {
