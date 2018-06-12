@@ -7,12 +7,12 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.cache.annotation.EnableCaching;
 
 /**
- * START : You can try run or debug from here using spring boot
+ * START : You can try run or debug from here using spring boot from here or click from tool bar
  */
 @SpringBootApplication
 @EnableCaching
 public class UnifonicApplication extends SpringBootServletInitializer {
-
+/**/
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
         return application.sources(UnifonicApplication.class);

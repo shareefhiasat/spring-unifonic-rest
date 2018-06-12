@@ -1,3 +1,13 @@
+Check Vedio First
+I used Cloudinary for hosting it its cool cloud SAAS
+[Vedio Swagger Usage Debug from IDE with configuration MySql](http://res.cloudinary.com/shareefhiasat/raw/upload/v1528838326/Video-2018-06-13_00.12.39_s9wymo.mp4)
+
+[Vedio How to use SDK client with maven java command](http://res.cloudinary.com/shareefhiasat/raw/upload/v1528839623/Video-2018-06-13_00.31.06_gx8dyq.mp4)
+[Get the pre prepared WAR packaged ](Download War https://drive.google.com/open?id=1KDG99pANcg41P0YV1uYh75sYIm0vKPkv)
+
+[How to run with spring boot command with mysql and jdbc, then spring-data-jpa profiles](http://res.cloudinary.com/shareefhiasat/raw/upload/v1528839984/Video-2018-06-13_00.42.47_nzasdb.mp4)
+[Try Hsqldb profile no need to configure any database locally](http://res.cloudinary.com/shareefhiasat/raw/upload/v1528840165/Video-2018-06-13_00.46.57_jm7ibi.mp4)
+
 # REST version of Spring Boot Unifonic Sample Application
 
 This backend version of the `Spring Unifonic` application only provides a REST API. </br>**There is no UI**.
@@ -37,7 +47,7 @@ To run unifonic locally using persistent database, it is needed to change profil
 
 For MySQL database, it is needed to change param `"hsqldb"` to `"mysql"` in string
 ```
-spring.profiles.active=hsqldb,spring-message-jpa
+spring.profiles.active=hsqldb,spring-data-jpa
 ```
  defined in application.properties file.
 
@@ -61,7 +71,7 @@ docker run --name mysql-unifonic -e MYSQL_ROOT_PASSWORD=unifonci -e MYSQL_DATABA
 
 For PostgeSQL database, it is needed to change param `"hsqldb"` to `"postgresql"` in string
 ```
-spring.profiles.active=hsqldb,spring-message-jpa
+spring.profiles.active=hsqldb,spring-data-jpa
 ```
  defined in `application.properties` file.
 
@@ -238,4 +248,4 @@ from <br/> [Unifonic API Guide Error-List](https://unifonic.docs.apiary.io/#refe
  2. One - for **_select_ database**
      - When using Spring jpa, use: jpa
      - When using Spring JDBC, use: jdbc
-     - When using Spring Message JPA, use: spring-message-jpa
+     - When using Spring Message JPA, use: spring-data-jpa
