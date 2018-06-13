@@ -185,6 +185,9 @@ Sending 1500 message, and get status 1500 times.
 **Test was on my local laptop i7 8GB RAM , 250 GB SSD HDD.**
 ![](https://s.nimbusweb.me/attachment/1807019/tigfp1ldiccxf8gbw911/735212-m54wGEzrWS8aXkyZ/Screenshot_2018-06-13_05.41.17.png)
 No errors or overflow.
+
+**Here is the test PLAN**
+https://github.com/shareefhiasat/spring-unifonic-rest/blob/master/src/test/java/com/unifonci/jmeter/plans/Unifonic-send-then-get-status-3000-calls-in-one-second.jmx
        
 ## Technology details
 - [x] [Java 8+](http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html)
