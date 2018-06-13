@@ -179,6 +179,12 @@ you can use [Run packaged war](https://docs.spring.io/spring-boot/docs/current/r
        ........ Started Example in 2.536 seconds (JVM running for 2.864) ``
        **As before, to exit the application, press ctrl-c.**
        4. Go to http://localhost:9966/unifonic/swagger-ui.html
+- [X] Prepare `JMeter version 3.1r` A stress testing setup to demonstrate the service performance
+Test Plan is here [JMeter Unifonic-send-then-get-status-3000-calls.jmx](http://res.cloudinary.com/shareefhiasat/raw/upload/v1528856619/Unifonic-send-then-get-status_jswah0.jmx)
+Sending 1500 message, and get status 1500 times.
+**Test was on my local laptop i7 8GB RAM , 250 GB SSD HDD.**
+![](https://s.nimbusweb.me/attachment/1807019/tigfp1ldiccxf8gbw911/735212-m54wGEzrWS8aXkyZ/Screenshot_2018-06-13_05.41.17.png)
+No errors or overflow.
        
 ## Technology details
 - [x] [Java 8+](http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html)
@@ -191,7 +197,9 @@ you can use [Run packaged war](https://docs.spring.io/spring-boot/docs/current/r
     - [Postgresql](https://www.postgresql.org/)</br>
     
 - [X] _Implement_ [HazelCast](https://hazelcast.com/)
-- [] Prepare `JMeter` A stress testing setup to demonstrate the service performance
+- [X] Prepare `JMeter` A stress testing setup to demonstrate the service performance
+
+[Vedio for JMeter 3000 call per seconds]
 - [] **Deploy on cloud**
 ### Extra Libraries/Tools Used:
 - _Implement_ [Logback](https://logback.qos.ch/) logging successor for log4j and implements slf4j API
