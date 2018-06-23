@@ -24,7 +24,7 @@ or
 	mvn.cmd spring-boot:run
 	
 	You may need to try this if you had trouble running
-	mvn.cmd spring-boot:run -Dspring.profiles.active=hsqldb,spring-data-jpa
+	./mvn spring-boot:run -Dspring.profiles.active=mysql,spring-data-jpa
 ```
 
 You can then access Unifonic here: http://localhost:9966/unifonic/

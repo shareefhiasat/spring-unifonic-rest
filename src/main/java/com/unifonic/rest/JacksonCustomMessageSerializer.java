@@ -63,7 +63,7 @@ public class JacksonCustomMessageSerializer extends StdSerializer<Message> {
         JsonGenerator jgen,
         SerializerProvider provider) throws IOException {
 
-        Format formatter = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+        Format formatter = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 
         if (message.isStatusAble()) {//for get message status
 
